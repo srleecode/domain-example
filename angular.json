@@ -121,7 +121,7 @@
       }
     },
     "domain-example-e2e": {
-      "root": "apps\\domain-example-e2e",
+      "root": "apps/domain-example-e2e",
       "sourceRoot": "apps/domain-example-e2e/src",
       "projectType": "application",
       "architect": {
