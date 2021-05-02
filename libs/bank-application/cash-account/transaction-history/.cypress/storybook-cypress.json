@@ -1,0 +1,11 @@
+{
+  "fileServerFolder": ".",
+  "integrationFolder": "./src/integration/storybook",
+  "modifyObstructiveCode": false,
+  "supportFile": "./src/support/index.ts",
+  "video": true,
+  "videosFolder": "../../../../../dist/cypress/apps/storybook/bank-application/cash-account/transaction-history/videos",
+  "screenshotsFolder": "../../../../../dist/cypress/apps/storybook/bank-application/cash-account/transaction-history/screenshots",
+  "chromeWebSecurity": false,
+  "baseUrl": "http://localhost:4400"
+}

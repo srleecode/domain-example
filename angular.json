@@ -33,6 +33,524 @@
   },
   "defaultProject": "domain-example",
   "projects": {
+    "bank-application-cash-account-shared-data-access": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/shared/data-access",
+      "sourceRoot": "libs/bank-application/cash-account/shared/data-access/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/shared/data-access/src/**/*.ts",
+              "libs/bank-application/cash-account/shared/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/shared/data-access"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/shared/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-shared-feature": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/shared/feature",
+      "sourceRoot": "libs/bank-application/cash-account/shared/feature/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/shared/feature/src/**/*.ts",
+              "libs/bank-application/cash-account/shared/feature/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/shared/feature"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/shared/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-shared-shell": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/shared/shell",
+      "sourceRoot": "libs/bank-application/cash-account/shared/shell/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/shared/shell/src/**/*.ts",
+              "libs/bank-application/cash-account/shared/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/shared/shell"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/shared/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-shared-ui": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/shared/ui",
+      "sourceRoot": "libs/bank-application/cash-account/shared/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/shared/ui/src/**/*.ts",
+              "libs/bank-application/cash-account/shared/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/cash-account/shared/ui"],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-shared-util": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/shared/util",
+      "sourceRoot": "libs/bank-application/cash-account/shared/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/shared/util/src/**/*.ts",
+              "libs/bank-application/cash-account/shared/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/shared/util"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/shared/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-transaction-history-data-access": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/transaction-history/data-access",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/data-access/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/data-access/src/**/*.ts",
+              "libs/bank-application/cash-account/transaction-history/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/transaction-history/data-access"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/transaction-history/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-transaction-history-feature": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/transaction-history/feature",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/feature/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/feature/src/**/*.ts",
+              "libs/bank-application/cash-account/transaction-history/feature/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/transaction-history/feature"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/transaction-history/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-transaction-history-shell": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/transaction-history/shell",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/shell/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/shell/src/**/*.ts",
+              "libs/bank-application/cash-account/transaction-history/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/transaction-history/shell"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/transaction-history/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-transaction-history-ui": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/transaction-history/ui",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/ui/src/**/*.ts",
+              "libs/bank-application/cash-account/transaction-history/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/transaction-history/ui"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/transaction-history/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-cash-account-transaction-history-util": {
+      "projectType": "library",
+      "root": "libs/bank-application/cash-account/transaction-history/util",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/util/src/**/*.ts",
+              "libs/bank-application/cash-account/transaction-history/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/bank-application/cash-account/transaction-history/util"
+          ],
+          "options": {
+            "jestConfig": "libs/bank-application/cash-account/transaction-history/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-dashboard-data-access": {
+      "projectType": "library",
+      "root": "libs/bank-application/dashboard/data-access",
+      "sourceRoot": "libs/bank-application/dashboard/data-access/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/dashboard/data-access/src/**/*.ts",
+              "libs/bank-application/dashboard/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/dashboard/data-access"],
+          "options": {
+            "jestConfig": "libs/bank-application/dashboard/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-dashboard-feature": {
+      "projectType": "library",
+      "root": "libs/bank-application/dashboard/feature",
+      "sourceRoot": "libs/bank-application/dashboard/feature/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/dashboard/feature/src/**/*.ts",
+              "libs/bank-application/dashboard/feature/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/dashboard/feature"],
+          "options": {
+            "jestConfig": "libs/bank-application/dashboard/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-dashboard-shell": {
+      "projectType": "library",
+      "root": "libs/bank-application/dashboard/shell",
+      "sourceRoot": "libs/bank-application/dashboard/shell/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/dashboard/shell/src/**/*.ts",
+              "libs/bank-application/dashboard/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/dashboard/shell"],
+          "options": {
+            "jestConfig": "libs/bank-application/dashboard/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-dashboard-ui": {
+      "projectType": "library",
+      "root": "libs/bank-application/dashboard/ui",
+      "sourceRoot": "libs/bank-application/dashboard/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/dashboard/ui/src/**/*.ts",
+              "libs/bank-application/dashboard/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/dashboard/ui"],
+          "options": {
+            "jestConfig": "libs/bank-application/dashboard/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-dashboard-util": {
+      "projectType": "library",
+      "root": "libs/bank-application/dashboard/util",
+      "sourceRoot": "libs/bank-application/dashboard/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/dashboard/util/src/**/*.ts",
+              "libs/bank-application/dashboard/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/dashboard/util"],
+          "options": {
+            "jestConfig": "libs/bank-application/dashboard/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-shared-data-access": {
+      "projectType": "library",
+      "root": "libs/bank-application/shared/data-access",
+      "sourceRoot": "libs/bank-application/shared/data-access/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/shared/data-access/src/**/*.ts",
+              "libs/bank-application/shared/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/shared/data-access"],
+          "options": {
+            "jestConfig": "libs/bank-application/shared/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-shared-feature": {
+      "projectType": "library",
+      "root": "libs/bank-application/shared/feature",
+      "sourceRoot": "libs/bank-application/shared/feature/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/shared/feature/src/**/*.ts",
+              "libs/bank-application/shared/feature/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/shared/feature"],
+          "options": {
+            "jestConfig": "libs/bank-application/shared/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-shared-shell": {
+      "projectType": "library",
+      "root": "libs/bank-application/shared/shell",
+      "sourceRoot": "libs/bank-application/shared/shell/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/shared/shell/src/**/*.ts",
+              "libs/bank-application/shared/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/shared/shell"],
+          "options": {
+            "jestConfig": "libs/bank-application/shared/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-shared-ui": {
+      "projectType": "library",
+      "root": "libs/bank-application/shared/ui",
+      "sourceRoot": "libs/bank-application/shared/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/shared/ui/src/**/*.ts",
+              "libs/bank-application/shared/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/shared/ui"],
+          "options": {
+            "jestConfig": "libs/bank-application/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bank-application-shared-util": {
+      "projectType": "library",
+      "root": "libs/bank-application/shared/util",
+      "sourceRoot": "libs/bank-application/shared/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/shared/util/src/**/*.ts",
+              "libs/bank-application/shared/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bank-application/shared/util"],
+          "options": {
+            "jestConfig": "libs/bank-application/shared/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "domain-example": {
       "projectType": "application",
       "root": "apps/domain-example",
@@ -146,6 +664,212 @@
           }
         }
       }
+    },
+    "e2e-bank-application-cash-account-transaction-history": {
+      "root": "libs/bank-application/cash-account/transaction-history/.cypress",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/.cypress/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "libs/bank-application/cash-account/transaction-history/.cypress/cypress.json",
+            "tsConfig": "libs/bank-application/cash-account/transaction-history/.cypress/tsconfig.e2e.json"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bank-application/cash-account/transaction-history/.cypress/**/*.{js,ts}"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "shared-components-button-feature": {
+      "projectType": "library",
+      "root": "libs/shared/components/button/feature",
+      "sourceRoot": "libs/shared/components/button/feature/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/components/button/feature/src/**/*.ts",
+              "libs/shared/components/button/feature/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/button/feature"],
+          "options": {
+            "jestConfig": "libs/shared/components/button/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-components-button-ui": {
+      "projectType": "library",
+      "root": "libs/shared/components/button/ui",
+      "sourceRoot": "libs/shared/components/button/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/components/button/ui/src/**/*.ts",
+              "libs/shared/components/button/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/button/ui"],
+          "options": {
+            "jestConfig": "libs/shared/components/button/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-components-button-util": {
+      "projectType": "library",
+      "root": "libs/shared/components/button/util",
+      "sourceRoot": "libs/shared/components/button/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/components/button/util/src/**/*.ts",
+              "libs/shared/components/button/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/button/util"],
+          "options": {
+            "jestConfig": "libs/shared/components/button/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-components-table-ui": {
+      "projectType": "library",
+      "root": "libs/shared/components/table/ui",
+      "sourceRoot": "libs/shared/components/table/ui/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/components/table/ui/src/**/*.ts",
+              "libs/shared/components/table/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/table/ui"],
+          "options": {
+            "jestConfig": "libs/shared/components/table/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-components-table-util": {
+      "projectType": "library",
+      "root": "libs/shared/components/table/util",
+      "sourceRoot": "libs/shared/components/table/util/src",
+      "prefix": "srlee",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/components/table/util/src/**/*.ts",
+              "libs/shared/components/table/util/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/table/util"],
+          "options": {
+            "jestConfig": "libs/shared/components/table/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "storybook-bank-application-cash-account-transaction-history": {
+      "root": "libs/bank-application/cash-account/transaction-history/.cypress",
+      "sourceRoot": "libs/bank-application/cash-account/transaction-history/.cypress/src",
+      "projectType": "application",
+      "architect": {
+        "storybook-e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "libs/bank-application/cash-account/transaction-history/.cypress/storybook-cypress.json",
+            "tsConfig": "libs/bank-application/cash-account/transaction-history/.cypress/tsconfig.e2e.json",
+            "devServerTarget": "storybook-bank-application-cash-account-transaction-history:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "storybook-bank-application-cash-account-transaction-history:storybook:ci"
+            }
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/bank-application/cash-account/transaction-history/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/storybook-bank-application-cash-account-transaction-history",
+            "config": {
+              "configFolder": "libs/bank-application/cash-account/transaction-history/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "bank-application-cash-account-transaction-history-data-access",
+        "bank-application-cash-account-transaction-history-feature",
+        "bank-application-cash-account-transaction-history-shell",
+        "bank-application-cash-account-transaction-history-ui",
+        "bank-application-cash-account-transaction-history-util"
+      ]
     }
   }
 }

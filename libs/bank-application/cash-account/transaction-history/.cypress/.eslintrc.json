@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "plugin:cypress/recommended",
+    "../../../../../.eslintrc.json"
+  ],
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "parserOptions": {
+        "project": "apps/e2e/bank-application/cash-account/transaction-history/tsconfig.*?.json"
+      },
+      "rules": {}
+    },
+    {
+      "files": [
+        "src/plugins/index.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/typescript"
+      ],
+      "parserOptions": {
+        "project": "libs/bank-application/cash-account/transaction-history/.cypress/tsconfig.e2e.json"
+      },
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/typescript"
+      ],
+      "parserOptions": {
+        "project": "libs/bank-application/cash-account/transaction-history/.cypress/tsconfig.e2e.json"
+      },
+      "rules": {}
+    }
+  ]
+}

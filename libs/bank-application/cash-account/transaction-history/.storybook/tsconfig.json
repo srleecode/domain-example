@@ -1,0 +1,18 @@
+{
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "types": [
+      "node"
+    ],
+    "sourceMap": true
+  },
+  "exclude": [
+    "../feature/**/*.spec.ts",
+    "../ui/**/*.spec.ts"
+  ],
+  "include": [
+    "../feature/src/**/*",
+    "../ui/src/**/*"
+  ]
+}

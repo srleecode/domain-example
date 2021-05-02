@@ -1,14 +1,19 @@
 {
-  "npmScope": "domain-example",
-  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "domain-example",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
@@ -24,10 +29,209 @@
     }
   },
   "projects": {
-    "domain-example": { "tags": [] },
+    "bank-application-cash-account-shared-data-access": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-shared",
+        "type:data-access"
+      ]
+    },
+    "bank-application-cash-account-shared-feature": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-shared",
+        "type:feature"
+      ]
+    },
+    "bank-application-cash-account-shared-shell": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-shared",
+        "type:shell"
+      ]
+    },
+    "bank-application-cash-account-shared-ui": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-shared",
+        "type:ui"
+      ]
+    },
+    "bank-application-cash-account-shared-util": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-shared",
+        "type:util"
+      ]
+    },
+    "bank-application-cash-account-transaction-history-data-access": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-transaction-history",
+        "type:data-access"
+      ]
+    },
+    "bank-application-cash-account-transaction-history-feature": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-transaction-history",
+        "type:feature"
+      ]
+    },
+    "bank-application-cash-account-transaction-history-shell": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-transaction-history",
+        "type:shell"
+      ]
+    },
+    "bank-application-cash-account-transaction-history-ui": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-transaction-history",
+        "type:ui"
+      ]
+    },
+    "bank-application-cash-account-transaction-history-util": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-cash-account-transaction-history",
+        "type:util"
+      ]
+    },
+    "bank-application-dashboard-data-access": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-dashboard",
+        "type:data-access"
+      ]
+    },
+    "bank-application-dashboard-feature": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-dashboard",
+        "type:feature"
+      ]
+    },
+    "bank-application-dashboard-shell": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-dashboard",
+        "type:shell"
+      ]
+    },
+    "bank-application-dashboard-ui": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-dashboard",
+        "type:ui"
+      ]
+    },
+    "bank-application-dashboard-util": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-dashboard",
+        "type:util"
+      ]
+    },
+    "bank-application-shared-data-access": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-shared",
+        "type:data-access"
+      ]
+    },
+    "bank-application-shared-feature": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-shared",
+        "type:feature"
+      ]
+    },
+    "bank-application-shared-shell": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-shared",
+        "type:shell"
+      ]
+    },
+    "bank-application-shared-ui": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-shared",
+        "type:ui"
+      ]
+    },
+    "bank-application-shared-util": {
+      "tags": [
+        "app:bank-application",
+        "scope:bank-application-shared",
+        "type:util"
+      ]
+    },
+    "domain-example": {
+      "tags": []
+    },
     "domain-example-e2e": {
       "tags": [],
-      "implicitDependencies": ["domain-example"]
+      "implicitDependencies": [
+        "domain-example"
+      ]
+    },
+    "e2e-bank-application-cash-account-transaction-history": {
+      "tags": [],
+      "implicitDependencies": [
+        "bank-application-cash-account-transaction-history-data-access",
+        "bank-application-cash-account-transaction-history-feature",
+        "bank-application-cash-account-transaction-history-shell",
+        "bank-application-cash-account-transaction-history-ui",
+        "bank-application-cash-account-transaction-history-util"
+      ]
+    },
+    "shared-components-button-feature": {
+      "tags": [
+        "app:shared",
+        "scope:shared-components-button",
+        "type:feature"
+      ]
+    },
+    "shared-components-button-ui": {
+      "tags": [
+        "app:shared",
+        "scope:shared-components-button",
+        "type:ui"
+      ]
+    },
+    "shared-components-button-util": {
+      "tags": [
+        "app:shared",
+        "scope:shared-components-button",
+        "type:util"
+      ]
+    },
+    "shared-components-table-ui": {
+      "tags": [
+        "app:shared",
+        "scope:shared-components-table",
+        "type:ui"
+      ]
+    },
+    "shared-components-table-util": {
+      "tags": [
+        "app:shared",
+        "scope:shared-components-table",
+        "type:util"
+      ]
+    },
+    "storybook-bank-application-cash-account-transaction-history": {
+      "tags": [],
+      "implicitDependencies": [
+        "bank-application-cash-account-transaction-history-data-access",
+        "bank-application-cash-account-transaction-history-feature",
+        "bank-application-cash-account-transaction-history-shell",
+        "bank-application-cash-account-transaction-history-ui",
+        "bank-application-cash-account-transaction-history-util"
+      ]
     }
   }
 }

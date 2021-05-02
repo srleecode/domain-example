@@ -10,15 +10,117 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@cypress/bank-application/dashboard": [
         "libs/bank-application/dashboard/.cypress/src/public-api.ts"
+      ],
+      "@domain-example/bank-application/dashboard/data-access": [
+        "libs/bank-application/dashboard/data-access/src/index.ts"
+      ],
+      "@domain-example/bank-application/dashboard/feature": [
+        "libs/bank-application/dashboard/feature/src/index.ts"
+      ],
+      "@domain-example/bank-application/dashboard/shell": [
+        "libs/bank-application/dashboard/shell/src/index.ts"
+      ],
+      "@domain-example/bank-application/dashboard/ui": [
+        "libs/bank-application/dashboard/ui/src/index.ts"
+      ],
+      "@domain-example/bank-application/dashboard/util": [
+        "libs/bank-application/dashboard/util/src/index.ts"
+      ],
+      "@domain-example-bank-application/dashboard/testing": [
+        "libs/bank-application/dashboard/util/src/testing.ts"
+      ],
+      "@domain-example/bank-application/cash-account/shared/data-access": [
+        "libs/bank-application/cash-account/shared/data-access/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/shared/feature": [
+        "libs/bank-application/cash-account/shared/feature/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/shared/shell": [
+        "libs/bank-application/cash-account/shared/shell/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/shared/ui": [
+        "libs/bank-application/cash-account/shared/ui/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/shared/util": [
+        "libs/bank-application/cash-account/shared/util/src/index.ts"
+      ],
+      "@domain-example-bank-application/cash-account/shared/testing": [
+        "libs/bank-application/cash-account/shared/util/src/testing.ts"
+      ],
+      "@domain-example/bank-application/cash-account/transaction-history/data-access": [
+        "libs/bank-application/cash-account/transaction-history/data-access/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/transaction-history/feature": [
+        "libs/bank-application/cash-account/transaction-history/feature/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/transaction-history/shell": [
+        "libs/bank-application/cash-account/transaction-history/shell/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/transaction-history/ui": [
+        "libs/bank-application/cash-account/transaction-history/ui/src/index.ts"
+      ],
+      "@domain-example/bank-application/cash-account/transaction-history/util": [
+        "libs/bank-application/cash-account/transaction-history/util/src/index.ts"
+      ],
+      "@domain-example-bank-application/cash-account/transaction-history/testing": [
+        "libs/bank-application/cash-account/transaction-history/util/src/testing.ts"
+      ],
+      "@domain-example/bank-application/shared/data-access": [
+        "libs/bank-application/shared/data-access/src/index.ts"
+      ],
+      "@domain-example/bank-application/shared/feature": [
+        "libs/bank-application/shared/feature/src/index.ts"
+      ],
+      "@domain-example/bank-application/shared/shell": [
+        "libs/bank-application/shared/shell/src/index.ts"
+      ],
+      "@domain-example/bank-application/shared/ui": [
+        "libs/bank-application/shared/ui/src/index.ts"
+      ],
+      "@domain-example/bank-application/shared/util": [
+        "libs/bank-application/shared/util/src/index.ts"
+      ],
+      "@domain-example-bank-application/shared/testing": [
+        "libs/bank-application/shared/util/src/testing.ts"
+      ],
+      "@domain-example/shared/components/button/feature": [
+        "libs/shared/components/button/feature/src/index.ts"
+      ],
+      "@domain-example/shared/components/button/ui": [
+        "libs/shared/components/button/ui/src/index.ts"
+      ],
+      "@domain-example/shared/components/button/util": [
+        "libs/shared/components/button/util/src/index.ts"
+      ],
+      "@domain-example-shared/components/button/testing": [
+        "libs/shared/components/button/util/src/testing.ts"
+      ],
+      "@domain-example/shared/components/table/ui": [
+        "libs/shared/components/table/ui/src/index.ts"
+      ],
+      "@domain-example/shared/components/table/util": [
+        "libs/shared/components/table/util/src/index.ts"
+      ],
+      "@domain-example-shared/components/table/testing": [
+        "libs/shared/components/table/util/src/testing.ts"
+      ],
+      "@cypress/bank-application/cash-account/transaction-history": [
+        "libs/bank-application/cash-account/transaction-history/.cypress/src/public-api.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
