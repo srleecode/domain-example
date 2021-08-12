@@ -1,5 +1,123 @@
 {
   "version": 1,
+  "projects": {
+    "domain": {
+      "projectType": "application",
+      "root": "apps/domain",
+      "sourceRoot": "apps/domain/src",
+      "prefix": "domain",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/domain",
+            "index": "apps/domain/src/index.html",
+            "main": "apps/domain/src/main.ts",
+            "polyfills": "apps/domain/src/polyfills.ts",
+            "tsConfig": "apps/domain/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["apps/domain/src/favicon.ico", "apps/domain/src/assets"],
+            "styles": ["apps/domain/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/domain/src/environments/environment.ts",
+                  "with": "apps/domain/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "domain:build:production"
+            },
+            "development": {
+              "browserTarget": "domain:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "domain:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/domain/src/**/*.ts",
+              "apps/domain/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/domain"],
+          "options": {
+            "jestConfig": "apps/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "domain-e2e": {
+      "root": "apps/domain-e2e",
+      "sourceRoot": "apps/domain-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/domain-e2e/cypress.json",
+            "tsConfig": "apps/domain-e2e/tsconfig.e2e.json",
+            "devServerTarget": "domain:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "domain:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/domain-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
@@ -24,139 +142,11 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest",
-      "strict": true
+      "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
       "style": "scss"
     }
   },
-  "defaultProject": "domain-example",
-  "projects": {
-    "domain-example": {
-      "projectType": "application",
-      "root": "apps/domain-example",
-      "sourceRoot": "apps/domain-example/src",
-      "prefix": "domain-example",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/domain-example",
-            "index": "apps/domain-example/src/index.html",
-            "main": "apps/domain-example/src/main.ts",
-            "polyfills": "apps/domain-example/src/polyfills.ts",
-            "tsConfig": "apps/domain-example/tsconfig.app.json",
-            "assets": [
-              "apps/domain-example/src/favicon.ico",
-              "apps/domain-example/src/assets"
-            ],
-            "styles": [
-              "apps/domain-example/src/styles.scss"
-            ],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/domain-example/src/environments/environment.ts",
-                  "with": "apps/domain-example/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "domain-example:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "domain-example:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "domain-example:build"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/domain-example/src/**/*.ts",
-              "apps/domain-example/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/domain-example"
-          ],
-          "options": {
-            "jestConfig": "apps/domain-example/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "domain-example-e2e": {
-      "root": "apps/domain-example-e2e",
-      "sourceRoot": "apps/domain-example-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/domain-example-e2e/cypress.json",
-            "tsConfig": "apps/domain-example-e2e/tsconfig.e2e.json",
-            "devServerTarget": "domain-example:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "domain-example:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps\\domain-example-e2e/**/*.{js,ts}"
-            ]
-          }
-        }
-      }
-    }
-  }
+  "defaultProject": "domain"
 }
