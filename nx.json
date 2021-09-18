@@ -1,5 +1,5 @@
 {
-  "npmScope": "domain",
+  "npmScope": "domain-example",
   "affected": {
     "defaultBase": "master"
   },
@@ -27,12 +27,12 @@
     ]
   },
   "projects": {
-    "domain": {
+    "domain-example": {
       "tags": []
     },
-    "domain-e2e": {
+    "domain-example-e2e": {
       "tags": [],
-      "implicitDependencies": ["domain"]
+      "implicitDependencies": ["domain-example"]
     }
   }
 }
