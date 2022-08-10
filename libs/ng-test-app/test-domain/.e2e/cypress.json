@@ -1,0 +1,12 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "supportFile": "./src/support/index.ts",
+  "pluginsFile": false,
+  "video": true,
+  "videosFolder": "../../../../dist/cypress/libs/ng-test-app/test-domain/.e2e/videos",
+  "screenshotsFolder": "../../../../dist/cypress/libs/ng-test-app/test-domain/.e2e/screenshots",
+  "chromeWebSecurity": false
+}
