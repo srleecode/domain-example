@@ -10,51 +10,11 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@cypress/component-testing": [
-        ".component-testing/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/application": [
-        "libs/ng-test-app/test-domain/application/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/data-access": [
-        "libs/ng-test-app/test-domain/data-access/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/directive-second-test": [
-        "libs/ng-test-app/test-domain/directive-second-test/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/directive-test-example": [
-        "libs/ng-test-app/test-domain/directive-test-example/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/domain": [
-        "libs/ng-test-app/test-domain/domain/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/feature-test-example": [
-        "libs/ng-test-app/test-domain/feature-test-example/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/shell-test-example": [
-        "libs/ng-test-app/test-domain/shell-test-example/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/ui-story-test-example": [
-        "libs/ng-test-app/test-domain/ui-story-test-example/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/ui-test-example": [
-        "libs/ng-test-app/test-domain/ui-test-example/src/index.ts"
-      ],
-      "@domain-example/ng-test-app/test-domain/util": [
-        "libs/ng-test-app/test-domain/util/src/index.ts"
-      ]
-    }
+    "paths": {}
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
