@@ -2,6 +2,7 @@
   "version": 1,
   "projects": {
     "domain-example": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "application",
       "root": "apps/domain-example",
       "sourceRoot": "apps/domain-example/src",
@@ -96,6 +97,7 @@
       "tags": []
     },
     "domain-example-e2e": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/domain-example-e2e",
       "sourceRoot": "apps/domain-example-e2e/src",
       "projectType": "application",
