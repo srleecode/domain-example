@@ -89,7 +89,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/domain-example"],
           "options": {
-            "jestConfig": "apps/domain-example/jest.config.js",
+            "jestConfig": "apps/domain-example/jest.config.ts",
             "passWithNoTests": true
           }
         }
