@@ -72,7 +72,8 @@
                   "type:application",
                   "type:data-access",
                   "type:domain",
-                  "type:util"
+                  "type:util",
+                  "type:infrastructure"
                 ],
                 "notDependOnLibsWithTags": []
               },
@@ -93,6 +94,41 @@
               {
                 "sourceTag": "type:util",
                 "onlyDependOnLibsWithTags": ["type:domain", "type:util"],
+                "notDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:presentation",
+                "onlyDependOnLibsWithTags": [
+                  "type:application",
+                  "type:domain",
+                  "type:presentation",
+                  "type:util"
+                ],
+                "notDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:infrastructure",
+                "onlyDependOnLibsWithTags": [
+                  "type:infrastructure",
+                  "type:domain",
+                  "type:util"
+                ],
+                "notDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "scope:ng-test-app-test-domain",
+                "onlyDependOnLibsWithTags": [
+                  "scope:ng-test-app-test-domain",
+                  "scope:ng-test-app-shared"
+                ],
+                "notDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "scope:ng-second-app-test-domain",
+                "onlyDependOnLibsWithTags": [
+                  "scope:ng-second-app-test-domain",
+                  "scope:ng-second-app-shared"
+                ],
                 "notDependOnLibsWithTags": []
               }
             ]

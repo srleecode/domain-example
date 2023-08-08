@@ -14,7 +14,38 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@domain-example/ng-second-app/test-domain/application": [
+        "libs/ng-second-app/test-domain/application/src/index.ts"
+      ],
+      "@domain-example/ng-second-app/test-domain/domain": [
+        "libs/ng-second-app/test-domain/domain/src/index.ts"
+      ],
+      "@domain-example/ng-second-app/test-domain/infrastructure": [
+        "libs/ng-second-app/test-domain/infrastructure/src/index.ts"
+      ],
+      "@domain-example/ng-second-app/test-domain/presentation": [
+        "libs/ng-second-app/test-domain/presentation/src/index.ts"
+      ],
+      "@domain-example/ng-second-app/test-domain/util": [
+        "libs/ng-second-app/test-domain/util/src/index.ts"
+      ],
+      "@domain-example/ng-test-app/test-domain/application": [
+        "libs/ng-test-app/test-domain/application/src/index.ts"
+      ],
+      "@domain-example/ng-test-app/test-domain/domain": [
+        "libs/ng-test-app/test-domain/domain/src/index.ts"
+      ],
+      "@domain-example/ng-test-app/test-domain/infrastructure": [
+        "libs/ng-test-app/test-domain/infrastructure/src/index.ts"
+      ],
+      "@domain-example/ng-test-app/test-domain/presentation": [
+        "libs/ng-test-app/test-domain/presentation/src/index.ts"
+      ],
+      "@domain-example/ng-test-app/test-domain/util": [
+        "libs/ng-test-app/test-domain/util/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

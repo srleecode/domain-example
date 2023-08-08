@@ -1,0 +1,31 @@
+{
+  "name": "e2e-ng-test-app-test-domain",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ng-test-app/test-domain/.e2e/src",
+  "projectType": "library",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/ng-test-app/test-domain/.e2e/cypress.config.ts",
+        "baseUrl": "./",
+        "testingType": "e2e"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ng-test-app/test-domain/.e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["app:ng-test-app", "scope:ng-test-app-test-domain", "type:e2e"],
+  "implicitDependencies": [
+    "ng-test-app-test-domain-application",
+    "ng-test-app-test-domain-domain",
+    "ng-test-app-test-domain-infrastructure",
+    "ng-test-app-test-domain-presentation",
+    "ng-test-app-test-domain-util"
+  ]
+}

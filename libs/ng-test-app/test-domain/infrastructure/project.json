@@ -1,0 +1,38 @@
+{
+  "name": "ng-test-app-test-domain-infrastructure",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ng-test-app/test-domain/infrastructure/src",
+  "prefix": "ng-test-app",
+  "tags": [
+    "app:ng-test-app",
+    "scope:ng-test-app-test-domain",
+    "type:infrastructure"
+  ],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ng-test-app/test-domain/infrastructure/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ng-test-app/test-domain/infrastructure/**/*.ts",
+          "libs/ng-test-app/test-domain/infrastructure/**/*.html"
+        ]
+      }
+    }
+  }
+}
